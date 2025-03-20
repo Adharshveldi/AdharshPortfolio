@@ -2,8 +2,8 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import restoration from "C:/Users/LENOVO C2IN/port1/Portfolio/src/Assets/Projects/Enhance.jpg";
-import chatbot from "C:/Users/LENOVO C2IN/port1/Portfolio/src/Assets/Projects/enhanced_image.jpg";
+import restoration from "C:/Users/LENOVO C2IN/AdharshPortfolio/src/Assets/Projects/Enhance.png";
+import chatbot from "C:/Users/LENOVO C2IN/AdharshPortfolio/src/Assets/Projects/enhanced_image.png";
 
 
 function Projects() {
