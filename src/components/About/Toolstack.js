@@ -3,28 +3,31 @@ import { Col, Row } from "react-bootstrap";
 import {
   SiVisualstudiocode,
   SiPostman,
-  SiSlack,
-  SiVercel,
-  SiMacos,
+  SiDocker,
+  SiGooglecolab,
+  SiJupyter,
+  SiAzuredevops,
+  SiPycharm,
 } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 
 function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <SiMacos />
+        <SiVisualstudiocode /> {/* VS Code */}
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiVisualstudiocode />
+        <SiJupyter /> {/* Jupyter Notebook */}
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiPostman />
+        <SiGooglecolab /> {/* Google Colab */}
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiSlack />
+        <SiAzuredevops /> {/* Azure DevOps */}
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiVercel />
+        <SiPostman /> {/* Postman */}
       </Col>
     </Row>
   );

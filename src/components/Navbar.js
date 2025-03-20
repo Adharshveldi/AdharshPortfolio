@@ -2,19 +2,11 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
-import { ImBlog } from "react-icons/im";
-import {
-  AiFillStar,
-  AiOutlineHome,
-  AiOutlineFundProjectionScreen,
-  AiOutlineUser,
-} from "react-icons/ai";
-
-import { CgFileDocument } from "react-icons/cg";
+import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
+import { BsMicrosoftTeams } from "react-icons/bs"; // Teams Icon
+import { AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -38,9 +30,12 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
+        {/* Navbar Logo */}
         <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="img-fluid logo" alt="brand" />
+          <strong className="logo" style={{ color: "#A855F7", fontSize: "1.8rem" }}>VAV.</strong>
         </Navbar.Brand>
+
+        {/* Navbar Toggle Button */}
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -51,67 +46,49 @@ function NavBar() {
           <span></span>
           <span></span>
         </Navbar.Toggle>
+
+        {/* Navbar Items */}
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto" defaultActiveKey="#home">
+          <Nav className="ms-auto align-items-center" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+                <AiOutlineHome className="nav-icon" /> Home
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/about"
-                onClick={() => updateExpanded(false)}
-              >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+              <Nav.Link as={Link} to="/about" onClick={() => updateExpanded(false)}>
+                <AiOutlineUser className="nav-icon" /> About
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/project"
-                onClick={() => updateExpanded(false)}
-              >
-                <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
-                />{" "}
-                Projects
+              <Nav.Link as={Link} to="/project" onClick={() => updateExpanded(false)}>
+                <AiOutlineFundProjectionScreen className="nav-icon" /> Projects
               </Nav.Link>
             </Nav.Item>
 
+            {/* GitHub */}
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/resume"
-                onClick={() => updateExpanded(false)}
-              >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+              <Nav.Link href="https://github.com/Adharshveldi" target="_blank" rel="noopener noreferrer">
+                <AiFillGithub className="nav-icon" /> GitHub
               </Nav.Link>
             </Nav.Item>
 
+            {/* LinkedIn */}
             <Nav.Item>
-              <Nav.Link
-                href="https://soumyajitblogs.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ImBlog style={{ marginBottom: "2px" }} /> Blogs
+              <Nav.Link href="https://www.linkedin.com/in/vivek-adharsh-veldi-b98b8a232/" target="_blank" rel="noopener noreferrer">
+                <FaLinkedinIn className="nav-icon" /> LinkedIn
               </Nav.Link>
             </Nav.Item>
 
-            <Nav.Item className="fork-btn">
-              <Button
-                href="https://github.com/soumyajit4419/Portfolio"
-                target="_blank"
-                className="fork-btn-inner"
-              >
-                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} />
-              </Button>
+            {/* Microsoft Teams */}
+            <Nav.Item>
+              <Nav.Link href="https://teams.live.com/l/invite/FBAoLWQUWxewanIIAE" target="_blank" rel="noopener noreferrer">
+                <BsMicrosoftTeams className="nav-icon" /> Connect
+              </Nav.Link>
             </Nav.Item>
+
           </Nav>
         </Navbar.Collapse>
       </Container>
