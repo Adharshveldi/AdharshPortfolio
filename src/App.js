@@ -35,10 +35,10 @@ function App() {
         <Navbar />
         <ScrollToTop />
         <Routes>
-          <Route path="/AdharshPortfolio/" element={<Home />} />
-          <Route path="/AdharshPortfolio/project" element={<Projects />} />
-          <Route path="/AdharshPortfolio/about" element={<About />} />
-          <Route path="/AdharshPortfolio/resume" element={<Resume />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/project" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />
